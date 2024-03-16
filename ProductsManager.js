@@ -9,8 +9,12 @@ class ProductsManager {
             price: data.price,
             stock: data.stock,
         }
-        ProductsManager.#products.push(user)
-        console.log("Producto creado")
+        if(!data.title || !data.photo || !data.category || !data.price || !data.stock){
+            console.log("Todos los campos son obligatorios")
+        } else {
+            ProductsManager.#products.push(user)
+            console.log("Producto creado")
+        }
     }
 
     read () {
@@ -42,7 +46,7 @@ productos.create({
 })
 productos.create({
     title: "Capuccino",
-    photo: "Cpuccino.png",
+    // photo: "Capuccino.png",
     category: "labial",
     price: 2000,
     stock: 15,
