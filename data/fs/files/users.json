@@ -1,0 +1,30 @@
+[
+  {
+    "id": "5b9346d3318da326175bfd39",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg",
+    "email": "prueba@gmail.com",
+    "password": "asd123",
+    "role": 0
+  },
+  {
+    "id": 3,
+    "photo": "photo2.jpg",
+    "email": "emailDel2@gmail.com",
+    "password": "passwordDel2",
+    "role": 0
+  },
+  {
+    "id": "b5d8596106b0e01b0ae529f3",
+    "photo": "photoUsuario.jpg",
+    "email": "emailNuevo@gmail.com",
+    "password": "passwordDel3",
+    "role": 0
+  },
+  {
+    "id": "b41cbf7f74d0bed68019f591",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg",
+    "email": "emailPrueba@gmail.com",
+    "password": "passwordDel4",
+    "role": 0
+  }
+]
