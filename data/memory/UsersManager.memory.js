@@ -4,6 +4,10 @@ class UsersManager {
     static #users = []
     create (data) {
         try{
+            if (!data.email || !data.password){
+                console.log("Usuario no creado. Todos los campos son obligatorios")
+                return
+            }
             const user = {
                 // data.id solo para chequear funcionalidad de codigos
                 id: data.id || crypto.randomBytes(12).toString("hex"),
@@ -12,13 +16,9 @@ class UsersManager {
                 password: data.password,
                 role: 0,
             }
-            if (!data.email || !data.password){
-                console.log("Usuario no creado. Todos los campos son obligatorios")
-            } else {
                 UsersManager.#users.push(user)
                 console.log("Usuario creado")
-            }
-        } catch (error){
+            } catch (error){
             console.log(error)
         }
     }

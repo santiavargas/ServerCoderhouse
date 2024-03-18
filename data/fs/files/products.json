@@ -78,5 +78,85 @@
     "category": "sombra",
     "price": 3000,
     "stock": 40
+  },
+  {
+    "id": "aa55fe86fb33dd6bbacb066b",
+    "title": "Ivory",
+    "photo": "Ivory.png",
+    "category": "base",
+    "price": 1500,
+    "stock": 20
+  },
+  {
+    "id": 2,
+    "title": "Super Red",
+    "photo": "SuperRed.png",
+    "category": "labial",
+    "price": 2000,
+    "stock": 30
+  },
+  {
+    "id": "bd67bb2382a6c9fdf285dfcd",
+    "title": "Nude",
+    "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+    "category": "sombra",
+    "price": 4000,
+    "stock": 50
+  },
+  {
+    "id": "bf155b9ca3841538b065e7dc",
+    "title": "Capuccino",
+    "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+    "category": "labial",
+    "price": 2000,
+    "stock": 15
+  },
+  {
+    "id": "2499852d53501f7b79a01325",
+    "title": "Night",
+    "photo": "Night.png",
+    "category": "sombra",
+    "price": 3000,
+    "stock": 40
+  },
+  {
+    "id": "65b90c750155258e592ef5ea",
+    "title": "Medium Beige",
+    "photo": "MediumBeige.png",
+    "category": "Base",
+    "price": 2000,
+    "stock": 50
+  },
+  {
+    "id": "d5e3b0046f81c0f27fb6763e",
+    "title": "Soft Honey",
+    "photo": "SoftHoney.png",
+    "category": "base",
+    "price": 2500,
+    "stock": 35
+  },
+  {
+    "id": "0d1dc13ef557c2b697ca8d23",
+    "title": "Viva la Pink!",
+    "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+    "category": "sombra",
+    "price": 5000,
+    "stock": 20
+  },
+  {
+    "id": "5a1fcef72f14c12e8bb1a306",
+    "title": "Enduring Wine",
+    "photo": "EnduringWine.png",
+    "category": "labial",
+    "price": 1500,
+    "stock": 60
+  },
+  {
+    "id": "5d57eab3768d861ddb005ff7",
+    "title": "Multi",
+    "photo": "Multi.png",
+    "category": "sombra",
+    "price": 3000,
+    "stock": 40
   }
 ]
