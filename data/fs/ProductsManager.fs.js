@@ -31,12 +31,14 @@ class ProductsManager{
                 price: data.price,
                 stock: data.stock,
             }
+            
             let products = await fs.promises.readFile(this.path, "utf-8")
             products = JSON.parse(products)
             products.push(product)
             console.log("Producto creado")
             products = JSON.stringify(products,null,2)
             await fs.promises.writeFile(this.path, products)
+
         } catch (error){
             console.log(error)
         }
@@ -163,6 +165,8 @@ async function test(){
     })
     console.log(await products.read())
     console.log(await products.readOne(2))
+
     console.log(await products.destroy(2))
+
 }
 test()

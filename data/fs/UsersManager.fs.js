@@ -18,6 +18,7 @@ class UsersManager{
     }
     async create (data) {
         try{
+
             if (!data.email || !data.password) {
                     console.log("Usuario no creado. Todos los campos son obligatorios")
                     return
@@ -40,7 +41,6 @@ class UsersManager{
                 console.log(error)
         }
     }
-    
         async read () {
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
@@ -72,6 +72,7 @@ class UsersManager{
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
                 users = JSON.parse(users)
+
                 let arrayFiltrado = users.filter(each=> each.id !== id)
                 if(arrayFiltrado){
                     console.log("Usuario eliminado")
@@ -112,6 +113,5 @@ async function test(){
     console.log(await users.read())
     console.log (await users.readOne(3))
     console.log (await users.destroy(3))
-    
 }
 test()
