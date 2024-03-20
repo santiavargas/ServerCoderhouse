@@ -19,24 +19,26 @@ class ProductsManager{
 
     async create (data) {
         try{
+            if(!data.title || !data.category || !data.price || !data.stock){
+                console.log("Producto no creado. Todos los campos son obligatorios")
+                return
+            }
             const product = {
-            id: data.id || crypto.randomBytes(12).toString("hex"),
-            title: data.title,
-            photo: data.photo || "https://definicion.de/wp-content/uploads/2009/06/producto.png",
-            category: data.category,
-            price: data.price,
-            stock: data.stock,
-        }
-        if(!data.title || !data.category || !data.price || !data.stock){
-            console.log("Producto no creado. Todos los campos son obligatorios")
-        } else {
+                id: data.id || crypto.randomBytes(12).toString("hex"),
+                title: data.title,
+                photo: data.photo || "https://definicion.de/wp-content/uploads/2009/06/producto.png",
+                category: data.category,
+                price: data.price,
+                stock: data.stock,
+            }
+            
             let products = await fs.promises.readFile(this.path, "utf-8")
             products = JSON.parse(products)
             products.push(product)
             console.log("Producto creado")
             products = JSON.stringify(products,null,2)
             await fs.promises.writeFile(this.path, products)
-        }
+
         } catch (error){
             console.log(error)
         }
@@ -74,10 +76,13 @@ class ProductsManager{
         try{
             let products = await fs.promises.readFile(this.path,"utf-8")
             products = JSON.parse(products)
-            const arrayFiltrado = products.filter(each=> each.id !== id)
+            let arrayFiltrado = products.filter(each=> each.id !== id)
             if(arrayFiltrado){
                 console.log("Producto eliminado")
-                await fs.promises.writeFile(arrayFiltrado)
+                console.log(arrayFiltrado)
+                arrayFiltrado = JSON.stringify(arrayFiltrado,null,2)
+                await fs.promises.writeFile(this.path, arrayFiltrado)
+                
             } else {
                 console.log("Producto no encontrado o id incorrecto")
             }
@@ -160,5 +165,8 @@ async function test(){
     })
     console.log(await products.read())
     console.log(await products.readOne(2))
+
+    console.log(await products.destroy(2))
+
 }
 test()

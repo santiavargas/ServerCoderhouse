@@ -18,6 +18,11 @@ class UsersManager{
     }
     async create (data) {
         try{
+
+            if (!data.email || !data.password) {
+                    console.log("Usuario no creado. Todos los campos son obligatorios")
+                    return
+            }
             const user = {
                 // data.id solo para chequear funcionalidad de codigos
                 id: data.id || crypto.randomBytes(12).toString("hex"),
@@ -26,21 +31,16 @@ class UsersManager{
                 password: data.password,
                 role: 0,
             } 
-            if (!data.email || !data.password) {
-                    console.log("Usuario no creado. Todos los campos son obligatorios")
-                } else {
-                    let users = await fs.promises.readFile(this.path, "utf-8")
-                    users = JSON.parse(users)
-                    users.push(user)
-                    console.log("Usuario creado")
-                    users = JSON.stringify(users,null,2)
-                    await fs.promises.writeFile(this.path, users)
-                }
-            } catch (error){
+            let users = await fs.promises.readFile(this.path, "utf-8")
+            users = JSON.parse(users)
+            users.push(user)
+            console.log("Usuario creado")
+            users = JSON.stringify(users,null,2)
+            await fs.promises.writeFile(this.path, users)
+        } catch (error){
                 console.log(error)
-            }
         }
-    
+    }
         async read () {
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
@@ -72,10 +72,13 @@ class UsersManager{
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
                 users = JSON.parse(users)
-                const arrayFiltrado = users.filter(each=> each.id !== id)
+
+                let arrayFiltrado = users.filter(each=> each.id !== id)
                 if(arrayFiltrado){
                     console.log("Usuario eliminado")
-                    await fs.promises.writeFile(arrayFiltrado)
+                    console.log(arrayFiltrado)
+                    arrayFiltrado = JSON.stringify(arrayFiltrado,null,2)
+                    await fs.promises.writeFile(this.path, arrayFiltrado)
                 } else {
                     console.log("Usuario no encontrado o id incorrecto")
                 }
@@ -109,6 +112,6 @@ async function test(){
     })
     console.log(await users.read())
     console.log (await users.readOne(3))
-    
+    console.log (await users.destroy(3))
 }
 test()

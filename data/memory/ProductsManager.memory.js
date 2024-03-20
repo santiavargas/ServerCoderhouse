@@ -3,6 +3,10 @@ class ProductsManager {
     static #products = []
     create (data) {
         try{
+            if(!data.title || !data.category || !data.price || !data.stock){
+            console.log("Todos los campos son obligatorios")
+            return
+            }
             const product = {
             id: data.id || crypto.randomBytes(12).toString("hex"),
             title: data.title,
@@ -10,13 +14,9 @@ class ProductsManager {
             category: data.category,
             price: data.price,
             stock: data.stock,
-        }
-        if(!data.title || !data.category || !data.price || !data.stock){
-            console.log("Todos los campos son obligatorios")
-        } else {
+            }
             ProductsManager.#products.push(product)
             console.log("Producto creado")
-        }
         } catch (error){
             console.log(error)
         }
@@ -49,7 +49,6 @@ class ProductsManager {
         try{
             const arrayFiltrado = ProductsManager.#products.filter(each=> each.id !== id)
             if(arrayFiltrado){
-                console.log(productos.readOne(id))
                 console.log("Producto eliminado")
                 ProductsManager.#products = arrayFiltrado
                 console.log(productos.read())
@@ -65,7 +64,7 @@ class ProductsManager {
 
 const productos = new ProductsManager()
 productos.create({
-    title: "Ivory",
+    // title: "Ivory", COMENTADO A MODO DE PRUEBA
     photo: "Ivory.png",
     category: "base",
     price: 1500,
@@ -82,7 +81,7 @@ productos.create({
 productos.create({
     title: "Nude",
     category: "sombra",
-    price: 4000,
+    price: 4000, 
     stock: 50,
 })
 productos.create({
