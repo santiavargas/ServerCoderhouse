@@ -49,7 +49,6 @@ class ProductsManager {
         try{
             const arrayFiltrado = ProductsManager.#products.filter(each=> each.id !== id)
             if(arrayFiltrado){
-                console.log(productos.readOne(id))
                 console.log("Producto eliminado")
                 ProductsManager.#products = arrayFiltrado
                 console.log(productos.read())

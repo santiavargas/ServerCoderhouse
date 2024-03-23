@@ -50,7 +50,6 @@ class UsersManager {
         try{
             const arrayFiltrado = UsersManager.#users.filter(each=> each.id !== id)
             if(arrayFiltrado){
-                console.log(usuarios.readOne(id))
                 console.log("Usuario eliminado")
                 UsersManager.#users = arrayFiltrado
                 console.log(usuarios.read())
