@@ -1,4 +1,4 @@
-const crypto = require ("crypto")
+import crypto from "crypto"
 
 class UsersManager {
     static #users = []
@@ -34,9 +34,9 @@ class UsersManager {
 
     readOne (id) {
         try{
-            const idEncontrado = UsersManager.#users.find(each=> each.id === id)
-            if(idEncontrado){
-                console.log(idEncontrado)
+            const idFound = UsersManager.#users.find(each=> each.id === id)
+            if(idFound){
+                console.log(idFound)
             } else {
                 console.log("usuario no encontrado o id incorrecto")
             }
@@ -48,11 +48,10 @@ class UsersManager {
 
     destroy (id) {
         try{
-            const arrayFiltrado = UsersManager.#users.filter(each=> each.id !== id)
-            if(arrayFiltrado){
-                console.log(usuarios.readOne(id))
+            const arrayFiltered = UsersManager.#users.filter(each=> each.id !== id)
+            if(arrayFiltered){
                 console.log("Usuario eliminado")
-                UsersManager.#users = arrayFiltrado
+                UsersManager.#users = arrayFiltered
                 console.log(usuarios.read())
             } else {
                 console.log("Usuario no encontrado o id incorrecto")

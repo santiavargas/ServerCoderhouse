@@ -1,6 +1,6 @@
 [
   {
-    "id": "e90e88007dcbffdb1a57855c",
+    "id": "927e5acc004c2315ec4bc4a8",
     "title": "Ivory",
     "photo": "Ivory.png",
     "category": "base",
@@ -8,7 +8,7 @@
     "stock": 20
   },
   {
-    "id": 2,
+    "id": "3eaca89ceddf8ae47162ace8",
     "title": "Super Red",
     "photo": "SuperRed.png",
     "category": "labial",
@@ -16,7 +16,7 @@
     "stock": 30
   },
   {
-    "id": "570f51c23eb5e4e46cc075a6",
+    "id": "98996459923357b7aa0dbba2",
     "title": "Nude",
     "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
     "category": "sombra",
@@ -24,7 +24,7 @@
     "stock": 50
   },
   {
-    "id": "bf0669901c2a62f444ffdefd",
+    "id": "826314846d365188dd0de79e",
     "title": "Capuccino",
     "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
     "category": "labial",
@@ -32,7 +32,7 @@
     "stock": 15
   },
   {
-    "id": "fa89499525c6103c566031f8",
+    "id": "a064cc243e84b936a73ba2ab",
     "title": "Night",
     "photo": "Night.png",
     "category": "sombra",
@@ -40,7 +40,7 @@
     "stock": 40
   },
   {
-    "id": "ce725d48c0634fb806e22b51",
+    "id": "1069669b57bdb91630067ce3",
     "title": "Medium Beige",
     "photo": "MediumBeige.png",
     "category": "Base",
@@ -48,7 +48,7 @@
     "stock": 50
   },
   {
-    "id": "a5308b147cddbdffba86c7b6",
+    "id": "d9630457790d83724d5669f9",
     "title": "Soft Honey",
     "photo": "SoftHoney.png",
     "category": "base",
@@ -56,7 +56,7 @@
     "stock": 35
   },
   {
-    "id": "f58880d4efbba990d6f76dff",
+    "id": "829cfe2ae4844faf8deeaac5",
     "title": "Viva la Pink!",
     "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
     "category": "sombra",
@@ -64,7 +64,7 @@
     "stock": 20
   },
   {
-    "id": "9de1f3db0fa778326a68bf0f",
+    "id": "bc29f7a2d6f4d90b1aae919e",
     "title": "Enduring Wine",
     "photo": "EnduringWine.png",
     "category": "labial",
@@ -72,7 +72,7 @@
     "stock": 60
   },
   {
-    "id": "d770173540c18177acfff7f6",
+    "id": "5a4b1b35fed0580051ce3225",
     "title": "Multi",
     "photo": "Multi.png",
     "category": "sombra",
@@ -80,83 +80,83 @@
     "stock": 40
   },
   {
-    "id": "aa55fe86fb33dd6bbacb066b",
-    "title": "Ivory",
-    "photo": "Ivory.png",
-    "category": "base",
-    "price": 1500,
+    "id": "8b5f743753c40d8f6e00d41a",
+    "title": "Bruma tonificante",
+    "photo": "brumaT.png",
+    "category": "skincare",
+    "price": 7000,
     "stock": 20
   },
   {
-    "id": 2,
-    "title": "Super Red",
-    "photo": "SuperRed.png",
-    "category": "labial",
-    "price": 2000,
+    "id": "af08386544c0b06bd7fc16af",
+    "title": "Protector solar 30fps",
+    "photo": "pS30.png",
+    "category": "protectorSolar",
+    "price": 15000,
+    "stock": 40
+  },
+  {
+    "id": "b7845377e7e21062b09c5578",
+    "title": "Protector solar 40fps",
+    "photo": "pS40.png",
+    "category": "protectorSolar",
+    "price": 20000,
+    "stock": 40
+  },
+  {
+    "id": "51aaefbfcd12ffa9946fbe64",
+    "title": "Protector solar 50fps",
+    "photo": "pS50.png",
+    "category": "protectorSolar",
+    "price": 25000,
+    "stock": 40
+  },
+  {
+    "id": "b21fb7808841d3fab59345ac",
+    "title": "Bruma Loción Fresh",
+    "photo": "brumaLF.png",
+    "category": "skincare",
+    "price": 7500,
+    "stock": 25
+  },
+  {
+    "id": "cd25ba004cb5a01ddb7a60ad",
+    "title": "Bruma Antioxidante",
+    "photo": "brumaA.png",
+    "category": "skincare",
+    "price": 8000,
     "stock": 30
   },
   {
-    "id": "bd67bb2382a6c9fdf285dfcd",
-    "title": "Nude",
-    "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
-    "category": "sombra",
-    "price": 4000,
-    "stock": 50
-  },
-  {
-    "id": "bf155b9ca3841538b065e7dc",
-    "title": "Capuccino",
-    "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
-    "category": "labial",
-    "price": 2000,
-    "stock": 15
-  },
-  {
-    "id": "2499852d53501f7b79a01325",
-    "title": "Night",
-    "photo": "Night.png",
-    "category": "sombra",
-    "price": 3000,
+    "id": "4acecfbe864b8667b7f17bde",
+    "title": "Serum Efecto Tensor",
+    "photo": "serumET.png",
+    "category": "skincare",
+    "price": 10000,
     "stock": 40
   },
   {
-    "id": "65b90c750155258e592ef5ea",
-    "title": "Medium Beige",
-    "photo": "MediumBeige.png",
-    "category": "Base",
-    "price": 2000,
-    "stock": 50
+    "id": "852be2d6e0ff24c8b59d09dd",
+    "title": "Serum Aclarante",
+    "photo": "serumA.png",
+    "category": "skincare",
+    "price": 10500,
+    "stock": 40
   },
   {
-    "id": "d5e3b0046f81c0f27fb6763e",
-    "title": "Soft Honey",
-    "photo": "SoftHoney.png",
-    "category": "base",
-    "price": 2500,
-    "stock": 35
+    "id": "4cd8fa3bcc738eb9b42f4538",
+    "title": "Serum Equilibrante",
+    "photo": "serumE.png",
+    "category": "skincare",
+    "price": 10500,
+    "stock": 40
   },
   {
-    "id": "0d1dc13ef557c2b697ca8d23",
-    "title": "Viva la Pink!",
-    "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
-    "category": "sombra",
-    "price": 5000,
-    "stock": 20
-  },
-  {
-    "id": "5a1fcef72f14c12e8bb1a306",
-    "title": "Enduring Wine",
-    "photo": "EnduringWine.png",
-    "category": "labial",
-    "price": 1500,
-    "stock": 60
-  },
-  {
-    "id": "5d57eab3768d861ddb005ff7",
-    "title": "Multi",
-    "photo": "Multi.png",
-    "category": "sombra",
-    "price": 3000,
+    "id": "60a2ffcd4451de91e5d5ed4c",
+    "title": "Serum Regenerante",
+    "photo": "serumR.png",
+    "category": "skincare",
+    "price": 11000,
     "stock": 40
   }
 ]

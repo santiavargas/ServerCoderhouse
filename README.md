@@ -1,31 +1,22 @@
 # ServerCoderhouse
 
-Desafio 1:
-En este desafio se crearon las clases UsersManager y ProductsManager en sus respectivos archivos para la gestion de distintos datos.
+-Esta aplicación funciona como un gestor de Usuarios y Productos. Cuenta con archivos memory.js que utiliza la terminal para funcionar y en el cual las craciones se pierden al cerrar la misma, y con archivos fs.js que funcionan igual que los memory pero creando archivos .json en donde se guardan los usuarios y productos creados. A esto se le suma un archivo server.js que levanta un servidor local para poder ver todo lo anteriormente dicho desde el navegador.
 
-La clase ProductsManager cuenta con las propiedades id, title, photo, category, price y stock.
-La clase UsersManager cuenta con las propiedades id, photo, email, password y role.
+-Esta aplicación fue creada con las siguienres herramientas y sus versiones:
+    -Node.js: 18.17.1
+    -npm: 9.6.7
+    -express: 4.19.1
+    -nodemon: 3.1.0 -- instalado como devDependencies
 
-El id se genera de forma automatica y es autoincrementable. El resto de las propiedades deben agregarse a traves del metodo create, en el que todos los campos son obligatorios.
+-Para correr nuestra aplicación deben ingresar en la consola el comando "npm run dev" lo que producira que el archivo server.js comience a funcionar, levante el servidor local y desde esa instancia podran ver las cosas creadas desde el navegador entrando a: localhost:8080/
+    -Para ver la lista de usuarios en el navegador: localhost:8080/api/users
+    -Para ver la lista de usuarios con los roles de cada uno en el navegador: localhost:8080/api/users?role=x
+        donde x es el número de role que desea buscar.
+    -Para buscar un usuario por su id desde el navegador: localhost:8080/api/users/x
+        donde x es el id del usuario a buscar
 
-Para poder ver los elementos creados se debe utilizar el read, que devuelve un array con los productos y usuarios creados.
-
-Por el momento solo se pueden ver las cosas por consola. Basta con abrir la consola y utilizar el entorno de node para visualizar todo en la misma
-=> .../ServerCoderhouse> node ./(archivoAVisualizar).js
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Desafio 2:
-
-Se corrigieron detalles erroneos o faltantes en el desafio 1, se cambió el formato del id, se agrego una ruta por defecto para las imagenes en el caso de que no se especifiquen.
-
-En este desafio se crearon las carpetas contenedoras para los archivos de memory ProductsManager.memory.js (antes ProductsManager.js) y UsersManager.memory.js (antes UsersManager.js) y los archivos de fs ProductsManager.fs.js y UsersManager.fs.js, más una carpeta para contener los archivos .json creados por los archivos fs.
-
-Se agregaron las funciones readOne() y destroy() las cuales reciben un id como parametro y devuelven el objeto buscado en el caso de readOne() o eliminan el objeto deseado en el caso de destroy(). A su vez, tanto estas funciones como create() y read() fueron completadas con manejo de error try/catch.
-
-Se agregaron 2 usuarios y 5 productos a los ya existentes en el desafio anterior.
-
-Para poder evaluar los distintos archivos se debe utilizar la consola con el entorno de node:
-
-.../ServerCoderhouse> node ./data/fs/(nombreDelArchivo).fs.js para los archivos de file system.
-.../ServerCoderhouse> node ./data/memory/(nombreDelArchivo).memory.js para los archivos de memoria.
+    -Para ver la lista de productos en el navegador: localhost:8080/api/products
+    -Para ver la lista de productos con las categorias de cada uno en el navegador: localhost:8080/api/products?category=x
+        donde x es la categoria que desea buscar.
+    -Para buscar un producto por su id desde el navegador: localhost:8080/api/products/x
+        donde x es el id del producto a buscar
