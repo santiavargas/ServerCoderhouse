@@ -45,8 +45,12 @@ class UsersManager{
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
                 users = JSON.parse(users)
-                users = users.filter(each=> each.role === role)
-                return users
+                if (!role){
+                    return users
+                }else{
+                    users = users.filter(each=> each.role === role)
+                    return users
+                }
             } catch (error){
                 console.log(error)
             }
