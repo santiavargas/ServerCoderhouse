@@ -1,6 +1,6 @@
 [
   {
-    "id": "f17035055383d917667e0558",
+    "id": "927e5acc004c2315ec4bc4a8",
     "title": "Ivory",
     "photo": "Ivory.png",
     "category": "base",
@@ -8,7 +8,15 @@
     "stock": 20
   },
   {
-    "id": "6756d4a7cfea876350ad2a81",
+    "id": "3eaca89ceddf8ae47162ace8",
+    "title": "Super Red",
+    "photo": "SuperRed.png",
+    "category": "labial",
+    "price": 2000,
+    "stock": 30
+  },
+  {
+    "id": "98996459923357b7aa0dbba2",
     "title": "Nude",
     "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
     "category": "sombra",
@@ -16,7 +24,7 @@
     "stock": 50
   },
   {
-    "id": "8ac77cc46f302679e61b4c0d",
+    "id": "826314846d365188dd0de79e",
     "title": "Capuccino",
     "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
     "category": "labial",
@@ -24,7 +32,7 @@
     "stock": 15
   },
   {
-    "id": "4327c38e7b90095457b1feef",
+    "id": "a064cc243e84b936a73ba2ab",
     "title": "Night",
     "photo": "Night.png",
     "category": "sombra",
@@ -32,7 +40,7 @@
     "stock": 40
   },
   {
-    "id": "1c6e2e283ee098ec1aff2aa9",
+    "id": "1069669b57bdb91630067ce3",
     "title": "Medium Beige",
     "photo": "MediumBeige.png",
     "category": "Base",
@@ -40,7 +48,7 @@
     "stock": 50
   },
   {
-    "id": "d2076a0877d576c955f4ddfa",
+    "id": "d9630457790d83724d5669f9",
     "title": "Soft Honey",
     "photo": "SoftHoney.png",
     "category": "base",
@@ -48,7 +56,7 @@
     "stock": 35
   },
   {
-    "id": "6910a4b94d5f48fdb5b57568",
+    "id": "829cfe2ae4844faf8deeaac5",
     "title": "Viva la Pink!",
     "photo": "https://definicion.de/wp-content/uploads/2009/06/producto.png",
     "category": "sombra",
@@ -56,9 +64,7 @@
     "stock": 20
   },
   {
-
-
-    "id": "0baa1817ee205981dfb2991b",
+    "id": "bc29f7a2d6f4d90b1aae919e",
     "title": "Enduring Wine",
     "photo": "EnduringWine.png",
     "category": "labial",
@@ -66,11 +72,91 @@
     "stock": 60
   },
   {
-    "id": "dcfb424cc839df1d757fece8",
+    "id": "5a4b1b35fed0580051ce3225",
     "title": "Multi",
     "photo": "Multi.png",
     "category": "sombra",
     "price": 3000,
+    "stock": 40
+  },
+  {
+    "id": "8b5f743753c40d8f6e00d41a",
+    "title": "Bruma tonificante",
+    "photo": "brumaT.png",
+    "category": "skincare",
+    "price": 7000,
+    "stock": 20
+  },
+  {
+    "id": "af08386544c0b06bd7fc16af",
+    "title": "Protector solar 30fps",
+    "photo": "pS30.png",
+    "category": "protectorSolar",
+    "price": 15000,
+    "stock": 40
+  },
+  {
+    "id": "b7845377e7e21062b09c5578",
+    "title": "Protector solar 40fps",
+    "photo": "pS40.png",
+    "category": "protectorSolar",
+    "price": 20000,
+    "stock": 40
+  },
+  {
+    "id": "51aaefbfcd12ffa9946fbe64",
+    "title": "Protector solar 50fps",
+    "photo": "pS50.png",
+    "category": "protectorSolar",
+    "price": 25000,
+    "stock": 40
+  },
+  {
+    "id": "b21fb7808841d3fab59345ac",
+    "title": "Bruma Loción Fresh",
+    "photo": "brumaLF.png",
+    "category": "skincare",
+    "price": 7500,
+    "stock": 25
+  },
+  {
+    "id": "cd25ba004cb5a01ddb7a60ad",
+    "title": "Bruma Antioxidante",
+    "photo": "brumaA.png",
+    "category": "skincare",
+    "price": 8000,
+    "stock": 30
+  },
+  {
+    "id": "4acecfbe864b8667b7f17bde",
+    "title": "Serum Efecto Tensor",
+    "photo": "serumET.png",
+    "category": "skincare",
+    "price": 10000,
+    "stock": 40
+  },
+  {
+    "id": "852be2d6e0ff24c8b59d09dd",
+    "title": "Serum Aclarante",
+    "photo": "serumA.png",
+    "category": "skincare",
+    "price": 10500,
+    "stock": 40
+  },
+  {
+    "id": "4cd8fa3bcc738eb9b42f4538",
+    "title": "Serum Equilibrante",
+    "photo": "serumE.png",
+    "category": "skincare",
+    "price": 10500,
+    "stock": 40
+  },
+  {
+    "id": "60a2ffcd4451de91e5d5ed4c",
+    "title": "Serum Regenerante",
+    "photo": "serumR.png",
+    "category": "skincare",
+    "price": 11000,
     "stock": 40
   }
 ]
