@@ -1,4 +1,5 @@
 import crypto from "crypto"
+
 class ProductsManager {
     static #products = []
     create (data) {
@@ -202,7 +203,6 @@ productos.create({
     price: 11000,
     stock: 40,
 })
-
 
 console.log(productos.read())
 console.log("prueba de readOne")

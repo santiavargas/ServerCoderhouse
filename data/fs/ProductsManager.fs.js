@@ -42,6 +42,7 @@ class ProductsManager{
         }
     }
 
+
     async read (categ) {
         try{
             let products = await fs.promises.readFile(this.path, "utf-8")
@@ -87,7 +88,6 @@ class ProductsManager{
             } else {
                 console.log("Producto no encontrado o id incorrecto")
             }
-            
         } catch (error){
             console.log(error)
         }
