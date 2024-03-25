@@ -32,12 +32,14 @@ class ProductsManager{
                 price: data.price,
                 stock: data.stock,
             }
+
             let products = await fs.promises.readFile(this.path, "utf-8")
             products = JSON.parse(products)
             products.push(product)
             console.log("Producto creado")
             products = JSON.stringify(products,null,2)
             await fs.promises.writeFile(this.path, products)
+
         } catch (error){
             console.log(error)
         }
@@ -84,6 +86,7 @@ class ProductsManager{
              } else {
                 console.log("Producto no encontrado o id incorrecto")
             }
+
         } catch (error){
             console.log(error)
         }

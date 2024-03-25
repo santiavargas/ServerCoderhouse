@@ -1,0 +1,21 @@
+{
+  "name": "servercoderhouse",
+  "version": "1.0.0",
+  "description": "Desafio 1:\r En este desafio se crearon las clases UsersManager y ProductsManager en sus respectivos archivos para la gestion de distintos datos.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./server.js",
+    "dev": "nodemon ./server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
+

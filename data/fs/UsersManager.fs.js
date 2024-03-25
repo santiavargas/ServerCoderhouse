@@ -1,5 +1,5 @@
-const fs = require ("fs")
-const crypto = require ("crypto")
+import fs from "fs"
+import crypto from "crypto"
 
 class UsersManager{
     constructor(){
@@ -28,8 +28,8 @@ class UsersManager{
                 photo: data.photo || "https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg",
                 email: data.email,
                 password: data.password,
-                role: 0,
-            }
+                role: "0",
+            } 
             let users = await fs.promises.readFile(this.path, "utf-8")
             users = JSON.parse(users)
             users.push(user)
@@ -40,12 +40,13 @@ class UsersManager{
                 console.log(error)
         }
     }
-        async read () {
+        async read (role) {
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
                 users = JSON.parse(users)
+                users = users.filter(each=> each.role === role)
                 return users
-            } catch {
+            } catch (error){
                 console.log(error)
             }
             
@@ -55,10 +56,10 @@ class UsersManager{
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
                 users = JSON.parse(users)
-                let usersEncontrado = users.find(each=> each.id === id)
-
-                if(usersEncontrado){
-                    console.log(usersEncontrado)
+                let usersFound = users.find(each=> each.id === id)
+                if(usersFound){
+                    console.log(usersFound)
+                    return usersFound
                 } else {
                     console.log("usuario no encontrado o id incorrecto")
                 }
@@ -71,12 +72,12 @@ class UsersManager{
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
                 users = JSON.parse(users)
-                let arrayFiltrado = users.filter(each=> each.id !== id)
-                if(arrayFiltrado){
+                let arrayFiltered = users.filter(each=> each.id !== id)
+                if(arrayFiltered){
                     console.log("Usuario eliminado")
-                    console.log(arrayFiltrado)
-                    arrayFiltrado = JSON.stringify(arrayFiltrado,null,2)
-                    await fs.promises.writeFile(this.path, arrayFiltrado)
+                    console.log(arrayFiltered)
+                    arrayFiltered = JSON.stringify(arrayFiltered,null,2)
+                    await fs.promises.writeFile(this.path, arrayFiltered)
                 } else {
                     console.log("Usuario no encontrado o id incorrecto")
                 }
@@ -86,30 +87,31 @@ class UsersManager{
         }
 }
 
+// async function test(){
+//     const users = new UsersManager()
+//     await users.create({
+//         email: "prueba@gmail.com",
+//         password: "asd123",
+//     })
+//     await users.create({
+//         photo: "photo2.jpg",
+//         email: "emailDel2@gmail.com",
+//         password: "passwordDel2",
+//     })
+//     await users.create({
+//         photo: "photoUsuario.jpg",
+//         email: "emailNuevo@gmail.com",
+//         password: "passwordDel3",
+//     })
+//     await users.create({
+//         email: "emailPrueba@gmail.com",
+//         password: "passwordDel4",
+//     })
+//     console.log(await users.read())
+//     // console.log (await users.readOne(3))
+//     // console.log (await users.destroy(3))
+// }
+// test()
 
-async function test(){
-    const users = new UsersManager()
-    await users.create({
-        email: "prueba@gmail.com",
-        password: "asd123",
-    })
-    await users.create({
-        id: 3,
-        photo: "photo2.jpg",
-        email: "emailDel2@gmail.com",
-        password: "passwordDel2",
-    })
-    await users.create({
-        photo: "photoUsuario.jpg",
-        email: "emailNuevo@gmail.com",
-        password: "passwordDel3",
-    })
-    await users.create({
-        email: "emailPrueba@gmail.com",
-        password: "passwordDel4",
-    })
-    console.log(await users.read())
-    console.log (await users.readOne(3))
-    console.log (await users.destroy(3))
-}
-test()
+const usersManager = new UsersManager()
+export default usersManager
