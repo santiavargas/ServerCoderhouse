@@ -1,27 +1,27 @@
 [
   {
-    "id": "e8a458bf53a2ff9d9b0fbec1",
+    "id": "f91029be8135c5326eceaa0a",
     "photo": "https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg",
     "email": "prueba@gmail.com",
     "password": "asd123",
     "role": "0"
   },
   {
-    "id": "352453350570944ca0aa2246",
+    "id": "4383babd935998ad72bbec76",
     "photo": "photo2.jpg",
     "email": "emailDel2@gmail.com",
     "password": "passwordDel2",
     "role": "0"
   },
   {
-    "id": "78909574216df8bc1d45d232",
+    "id": "cd9bcd41bf1daa98f51d91e2",
     "photo": "photoUsuario.jpg",
     "email": "emailNuevo@gmail.com",
     "password": "passwordDel3",
-    "role": "0"
+    "role": "1"
   },
   {
-    "id": "632f45628a788b000ffb3bd3",
+    "id": "d1048bc38e37c01c9e4372bb",
     "photo": "https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg",
     "email": "emailPrueba@gmail.com",
     "password": "passwordDel4",

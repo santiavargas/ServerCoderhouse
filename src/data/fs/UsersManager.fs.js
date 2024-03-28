@@ -1,9 +1,10 @@
 import fs from "fs"
 import crypto from "crypto"
 
+
 class UsersManager{
     constructor(){
-        this.path = "./data/fs/files/users.json",
+        this.path = "./src/data/fs/files/users.json",
         this.init()
     }
     init(){
@@ -29,7 +30,7 @@ class UsersManager{
                 photo: data.photo || "https://upload.wikimedia.org/wikipedia/commons/5/59/User-avatar.svg",
                 email: data.email,
                 password: data.password,
-                role: "0",
+                role: data.role || "0",
             } 
             let users = await fs.promises.readFile(this.path, "utf-8")
             users = JSON.parse(users)
@@ -37,6 +38,7 @@ class UsersManager{
             console.log("Usuario creado")
             users = JSON.stringify(users,null,2)
             await fs.promises.writeFile(this.path, users)
+            return user
         } catch (error){
                 console.log(error)
         }
@@ -66,26 +68,48 @@ class UsersManager{
                     console.log(usersFound)
                     return usersFound
                 } else {
-                    console.log("usuario no encontrado o id incorrecto")
+                    console.log("User not found or incorrect id")
                 }
                 
             } catch (error) {
                 console.log (error)
             }
         }
+
+        async update (id,data) {
+            try {
+                let users = await fs.promises.readFile(this.path, "utf-8")
+                users = JSON.parse(users)
+                let userUpdate = users.find(each=> each.id === id)
+                if(userUpdate){
+                    for (let newInfo in data){
+                        userUpdate[newInfo] = data[newInfo]
+                    }
+                    users = JSON.stringify(users,null,2)
+                    await fs.promises.writeFile(this.path,users)
+                    return userUpdate
+                } else {
+                    console.log("User not found or incorrect id")
+                }
+            } catch (error) {
+                console.log (error)
+            }
+        }
+
         async destroy (id) {
             try{
                 let users = await fs.promises.readFile(this.path, "utf-8")
                 users = JSON.parse(users)
-
-                let arrayFiltered = users.filter(each=> each.id !== id)
-                if(arrayFiltered){
+                let destroyUser = users.find(each=> each.id === id)
+                if(destroyUser){
+                    let arrayFiltered = users.filter(each=> each.id !== id)
                     console.log("Usuario eliminado")
                     console.log(arrayFiltered)
                     arrayFiltered = JSON.stringify(arrayFiltered,null,2)
                     await fs.promises.writeFile(this.path, arrayFiltered)
+                    return destroyUser
                 } else {
-                    console.log("Usuario no encontrado o id incorrecto")
+                    console.log("User not found or incorrect id")
                 }
             } catch (error){
                 console.log(error)
